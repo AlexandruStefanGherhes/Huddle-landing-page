@@ -3,7 +3,9 @@
 @import "breakpoints";
 
 body {
-    position: relative;
+  position: relative;
+  // border:5px solid white;
+
   &::before {
     content: "";
     position: absolute;
@@ -20,7 +22,7 @@ body {
       z-index: -1;
       left: 0;
       top: 0;
-      
+      background-size: center;
     }
   }
 
@@ -36,10 +38,10 @@ body {
     z-index: -1;
     @include xl {
       z-index: -1;
-      width: 55%;
-      height: 55%;
+      width: 56%;
+      height: 56%;
       top: 190px;
-      left: 75px;
+      left: 65px;
     }
   }
 }
@@ -67,10 +69,13 @@ header {
   align-self: flex-start;
   @include xl {
     padding-top: 35px;
+    margin-left: -30px;
   }
 
-  &img {
-    width: 45%;
+  img {
+    margin-top:10px;
+    width: 40%;
+    
     @include xl {
       width: 15%;
     }
@@ -83,7 +88,7 @@ header {
     align-self: flex-start;
     justify-self: flex-end;
     width: 45%;
-    padding-left: 15px;
+    margin-right: -25px;
   }
 
   &__title {
@@ -131,8 +136,8 @@ header {
       color: white;
     }
 
-    &:active{
-        transform: translateY(-3px);
+    &:active {
+      transform: translateY(-3px);
     }
   }
 }
