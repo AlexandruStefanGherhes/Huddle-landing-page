@@ -42,6 +42,9 @@ h6 {
   overflow-wrap: break-word;
 }
 
+body {
+  position: relative;
+}
 body::before {
   content: "";
   position: absolute;
@@ -71,6 +74,7 @@ body::after {
   left: 40px;
   background: url(/images/illustration-mockups.svg) no-repeat;
   background-size: contain;
+  z-index: -1;
 }
 @media (min-width: 1440px) {
   body::after {
@@ -83,7 +87,6 @@ body::after {
 }
 
 .wrapper {
-  min-height: 100vh;
   width: 90vw;
   margin: 0 auto;
   padding: 20px;
@@ -110,11 +113,11 @@ header {
     padding-top: 35px;
   }
 }
-header img {
+headerimg {
   width: 45%;
 }
 @media (min-width: 1440px) {
-  header img {
+  headerimg {
     width: 15%;
   }
 }
@@ -164,6 +167,7 @@ header img {
   color: hsl(257deg, 40%, 49%);
   box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  transition: all 200ms;
 }
 @media (min-width: 1440px) {
   .main__button {
@@ -173,8 +177,11 @@ header img {
   }
 }
 .main__button:hover {
-  background: none;
-  outline: 2px solid white;
+  background: hsl(300deg, 69%, 71%);
+  color: white;
+}
+.main__button:active {
+  transform: translateY(-3px);
 }
 
 .footer {
@@ -187,12 +194,16 @@ header img {
   }
 }
 .footer .fa-brands {
-  padding-right: 15px;
+  padding: 4px;
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
   color: white;
   font-size: 20px;
-  transition: all 0.25s;
-  cursor: pointer;
+  transition: all 200ms;
 }
-.footer_link {
-  cursor: pointer;
+.footer .fa-brands:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 15px 3px rgba(0, 0, 0, 0.5));
+  color: hsl(300deg, 69%, 71%);
 }/*# sourceMappingURL=main.css.map */

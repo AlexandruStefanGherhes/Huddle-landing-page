@@ -3,6 +3,7 @@
 @import "breakpoints";
 
 body {
+    position: relative;
   &::before {
     content: "";
     position: absolute;
@@ -17,8 +18,9 @@ body {
       background: url(/images/bg-desktop.svg) no-repeat;
       background-color: $primary;
       z-index: -1;
-      left:0;
-      top:0;
+      left: 0;
+      top: 0;
+      
     }
   }
 
@@ -31,6 +33,7 @@ body {
     left: 40px;
     background: url(/images/illustration-mockups.svg) no-repeat;
     background-size: contain;
+    z-index: -1;
     @include xl {
       z-index: -1;
       width: 55%;
@@ -42,7 +45,7 @@ body {
 }
 
 .wrapper {
-  min-height: 100vh;
+  //   min-height: 100vh;
   width: 90vw;
   margin: 0 auto;
   padding: 20px;
@@ -53,7 +56,7 @@ body {
   text-align: center;
   overflow: hidden;
 
-  @include xl{
+  @include xl {
     grid-template-rows: 200px 480px 100px;
     text-align: start;
   }
@@ -66,8 +69,7 @@ header {
     padding-top: 35px;
   }
 
-  // margin-top:10px;
-  img {
+  &img {
     width: 45%;
     @include xl {
       width: 15%;
@@ -77,21 +79,20 @@ header {
 
 .main {
   align-self: flex-start;
-  // margin-top:310px;
-  @include xl{
+  @include xl {
     align-self: flex-start;
     justify-self: flex-end;
-    width:45%;
-    padding-left:15px;
+    width: 45%;
+    padding-left: 15px;
   }
 
   &__title {
     font-size: 25px;
     color: white;
     line-height: 1.5;
-    @include xl{
-        width:70%;
-        font-size: 35px;
+    @include xl {
+      width: 70%;
+      font-size: 35px;
     }
   }
 
@@ -101,10 +102,10 @@ header {
     line-height: 1.5;
     font-weight: 100;
     padding: 20px 0 25px 0;
-    @include xl{
-        width:95%;
-        line-height: 1.7;
-        font-size: 17px;
+    @include xl {
+      width: 95%;
+      line-height: 1.7;
+      font-size: 17px;
     }
   }
 
@@ -117,16 +118,21 @@ header {
     color: $primary;
     box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    transition: all 200ms;
 
-    @include xl{
-        width:30%;
-        padding:13px;
-        font-size: 16px;
+    @include xl {
+      width: 30%;
+      padding: 13px;
+      font-size: 16px;
     }
 
     &:hover {
-      background: none;
-      outline: 2px solid white;
+      background: $accents;
+      color: white;
+    }
+
+    &:active{
+        transform: translateY(-3px);
     }
   }
 }
@@ -135,19 +141,23 @@ header {
   align-self: flex-start;
   margin-left: 15px;
 
-  @include xl{
+  @include xl {
     justify-self: flex-end;
   }
 
   .fa-brands {
-    padding-right: 15px;
+    padding: 4px;
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
     color: white;
     font-size: 20px;
-    transition: all 0.25s;
-    cursor: pointer;
-  }
+    transition: all 200ms;
 
-  &_link {
-    cursor: pointer;
+    &:hover {
+      transform: translateY(-3px);
+      filter: drop-shadow(0 15px 3px rgba(0, 0, 0, 0.5));
+      color: $accents;
+    }
   }
 }
