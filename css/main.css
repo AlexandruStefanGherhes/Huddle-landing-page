@@ -52,13 +52,13 @@ body::before {
   width: 100%;
   left: 0;
   top: 0;
-  background: url(images/bg-mobile.svg) no-repeat;
+  background: url(/images/bg-mobile.svg) no-repeat;
   background-color: hsl(257deg, 40%, 49%);
   z-index: -1;
 }
 @media (min-width: 1440px) {
   body::before {
-    background: url(images/bg-desktop.svg) no-repeat;
+    background: url(/images/bg-desktop.svg) no-repeat;
     background-color: hsl(257deg, 40%, 49%);
     z-index: -1;
     left: 0;
@@ -73,7 +73,7 @@ body::after {
   width: 80%;
   top: 120px;
   left: 40px;
-  background: url(images/illustration-mockups.svg) no-repeat;
+  background: url(/images/illustration-mockups.svg) no-repeat;
   background-size: contain;
   z-index: -1;
 }
