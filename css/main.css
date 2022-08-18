@@ -63,6 +63,7 @@ body::before {
     z-index: -1;
     left: 0;
     top: 0;
+    background-size: center;
   }
 }
 body::after {
@@ -79,10 +80,10 @@ body::after {
 @media (min-width: 1440px) {
   body::after {
     z-index: -1;
-    width: 55%;
-    height: 55%;
+    width: 56%;
+    height: 56%;
     top: 190px;
-    left: 75px;
+    left: 65px;
   }
 }
 
@@ -111,13 +112,15 @@ header {
 @media (min-width: 1440px) {
   header {
     padding-top: 35px;
+    margin-left: -30px;
   }
 }
-headerimg {
-  width: 45%;
+header img {
+  margin-top: 10px;
+  width: 40%;
 }
 @media (min-width: 1440px) {
-  headerimg {
+  header img {
     width: 15%;
   }
 }
@@ -130,7 +133,7 @@ headerimg {
     align-self: flex-start;
     justify-self: flex-end;
     width: 45%;
-    padding-left: 15px;
+    margin-right: -2git 5px;
   }
 }
 .main__title {
