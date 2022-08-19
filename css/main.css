@@ -62,41 +62,22 @@ body::before {
     background-image: url(/images/bg-desktop.svg);
   }
 }
-body::after {
-  content: "";
-  position: absolute;
-  top: 120px;
-  left: 40px;
-  background-image: url(/images/illustration-mockups.svg);
-  width: 80%;
-  height: 80%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
-}
-@media (min-width: 1440px) {
-  body::after {
-    width: 50%;
-    left: 65px;
-    top: 190px;
-  }
-}
 
 header {
   padding-top: 10px;
 }
 @media (min-width: 1440px) {
   header {
-    width: 35%;
+    max-width: 35%;
     margin-top: 30px;
-    margin-left: -30px;
+    margin-left: -10px;
   }
 }
 
 .wrapper {
   width: 90%;
   display: grid;
-  grid-template-rows: 320px 200px 220px;
+  grid-template-rows: auto auto auto;
   padding: 1.25rem;
   text-align: center;
   margin: 0 auto;
@@ -104,8 +85,9 @@ header {
 }
 @media (min-width: 1440px) {
   .wrapper {
-    grid-template-rows: 150px 300px 250px;
+    grid-template-rows: auto auto auto;
     text-align: start;
+    max-width: 1400px;
   }
 }
 .wrapper img {
@@ -114,9 +96,25 @@ header {
 
 @media (min-width: 1440px) {
   .main {
-    max-width: 500px;
-    justify-self: flex-end;
-    margin-right: 10px;
+    display: flex;
+    gap: 40px;
+  }
+}
+.main__image img {
+  width: 100%;
+  margin-top: 52px;
+}
+@media (min-width: 1440px) {
+  .main__image img {
+    width: 100%;
+    flex-grow: 0.6;
+    padding-top: 30px;
+    margin-left: -10px;
+  }
+}
+@media (min-width: 1440px) {
+  .main__text {
+    max-width: 40%;
   }
 }
 .main__title {
@@ -128,6 +126,7 @@ header {
   .main__title {
     font-size: 35px;
     max-width: 400px;
+    padding-top: 30px;
   }
 }
 .main__description {
@@ -137,9 +136,14 @@ header {
   font-weight: 100;
   opacity: 0.8;
 }
+@media (min-width: 1440px) {
+  .main__description {
+    font-size: 1.2rem;
+  }
+}
 .main__button {
   border: none;
-  padding: 13px 75px;
+  padding: 10px 75px;
   border-radius: 30px;
   font-size: 13px;
   color: hsl(257deg, 40%, 49%);
@@ -158,9 +162,8 @@ header {
 }
 
 .footer {
-  margin-top: auto;
-  display: flex;
-  margin-left: 20px;
+  margin-top: 65px;
+  margin-left: 30px;
 }
 @media (min-width: 1440px) {
   .footer {
@@ -178,10 +181,10 @@ header {
   align-items: center;
   justify-content: center;
   margin-left: 15px;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 1px solid white;
   color: white;
   text-decoration: none;
   transition: all 250ms;
