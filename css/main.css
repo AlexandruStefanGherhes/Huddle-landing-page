@@ -51,7 +51,7 @@ body::before {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(images/bg-mobile.svg);
+  background-image: url(./images/bg-mobile.svg);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -59,7 +59,7 @@ body::before {
 }
 @media (min-width: 1440px) {
   body::before {
-    background-image: url(images/bg-desktop.svg);
+    background-image: url(./images/bg-desktop.svg);
   }
 }
 
