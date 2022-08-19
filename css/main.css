@@ -50,16 +50,30 @@ body::before {
   content: "";
   position: absolute;
   top: 0;
+
   left: 0;
   background-image: url(/images/bg-mobile.svg);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
+
+  background: url(./images/bg-mobile.svg) no-repeat;
+  background-color: hsl(257deg, 40%, 49%);
+
   z-index: -1;
 }
 @media (min-width: 1440px) {
   body::before {
+
     background-image: url(/images/bg-desktop.svg);
+
+    background: url(./images/bg-desktop.svg) no-repeat;
+    background-color: hsl(257deg, 40%, 49%);
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background-size: center;
+
   }
 }
 body::after {
@@ -67,10 +81,14 @@ body::after {
   position: absolute;
   top: 120px;
   left: 40px;
+
   background-image: url(/images/illustration-mockups.svg);
   width: 80%;
   height: 80%;
   background-repeat: no-repeat;
+
+  background: url(./images/illustration-mockups.svg) no-repeat;
+
   background-size: contain;
   z-index: -1;
 }
@@ -189,5 +207,9 @@ header {
 .footer__list a:hover {
   border-color: hsl(300deg, 69%, 71%);
   color: hsl(300deg, 69%, 71%);
+
   transform: translateY(-3px);
 }/*# sourceMappingURL=main.css.map */
+
+}/*# sourceMappingURL=main.css.map */
+
